@@ -17,6 +17,8 @@ const connectDb = async () => {
 
     // Connect to the database
     await mongoose.connect(process.env.URI, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
       dbName: 'bg-removal'  // Set the database name
     });
   } catch (err) {
