@@ -1,5 +1,5 @@
 import express from "express";
-import "dotenv/config"; // This automatically loads the .env file
+import "dotenv/config"; 
 import cors from "cors";
 import connectDb from "./configs/mongoDb.js";
 
@@ -18,17 +18,14 @@ app.get("/", (req, res) => {
 // Start the server and connect to the database
 const startServer = async () => {
   try {
-    // Attempt to connect to the database
     await connectDb();
-
-    // Define the PORT and start listening for requests
     const PORT = process.env.PORT || 3001;
     app.listen(PORT, () => {
       console.log(`Server is running on port ${PORT}`);
     });
   } catch (error) {
     console.error("Failed to start the server", error);
-    process.exit(1); // Exit the process with failure code
+    process.exit(1); 
   }
 };
 
