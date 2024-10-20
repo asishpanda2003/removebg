@@ -6,6 +6,7 @@ import userRouter from "./routes/userRoutes.js";
 
 // Initialize express app
 const app = express();
+await connectDb();
 
 // Middleware
 app.use(express.json());
@@ -20,7 +21,6 @@ app.use('/api/user',userRouter);
 // Start the server and connect to the database
 const startServer = async () => {
   try {
-    await connectDb();
     const PORT = process.env.PORT || 3001;
     app.listen(PORT, () => {
       console.log(`Server is running on port ${PORT}`);
