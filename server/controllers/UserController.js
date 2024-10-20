@@ -15,7 +15,7 @@ const clerkWebhooks=async(req,res)=>{
         })
 
         const {data,type}=req.body;
-        switch (key) {
+        switch (type) {
             case "user.created":{
                 const userData={
                     clerkId:data.id,
