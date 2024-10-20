@@ -2,6 +2,7 @@ import express from "express";
 import "dotenv/config"; 
 import cors from "cors";
 import connectDb from "./configs/mongoDb.js";
+import userRouter from "./routes/userRoutes.js";
 
 // Initialize express app
 const app = express();
@@ -14,6 +15,7 @@ app.use(cors());
 app.get("/", (req, res) => {
   res.send("Hello from the server!");
 });
+app.use('/api/user',userRouter);
 
 // Start the server and connect to the database
 const startServer = async () => {

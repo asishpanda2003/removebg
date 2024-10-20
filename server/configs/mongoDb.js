@@ -15,8 +15,6 @@ const connectDb = async () => {
     });
     
     await mongoose.connect(process.env.URI, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
       dbName: 'bg-removal'  
     });
   } catch (err) {
