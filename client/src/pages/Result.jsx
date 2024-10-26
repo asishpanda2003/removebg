@@ -37,8 +37,8 @@ const Result = () => {
 
         {/* buttons */}
         { resultImage && <div className="flex justify-center sm:justify-end items-center flex-wrap gap-4 mt-6">
-          <button className="px-8 py-2.5 text-violet-600 text-sm border border-violet-600 rounded-full hover:scale-105 transition-all duration-700">
-            Try another image
+          <button  className="px-8 py-2.5 text-violet-600 text-sm border border-violet-600 rounded-full hover:scale-105 transition-all duration-700">
+            <a href="/">Try another image</a>
           </button>
           <a href={resultImage} download
             className="px-8 py-2.5 text-white text-sm bg-gradient-to-r from-violet-600 to-fuchsia-500 rounded-full hover:scale-105 transition-all duration-700"

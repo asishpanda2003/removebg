@@ -1,9 +1,12 @@
 import express from "express"
-import 'dotenv/config'
+// import 'dotenv/config'
 import cors from "cors"
 import connectDB from "./configs/mongoDB.js";
 import userRouter from "./routes/userRoutes.js";
 import imageRouter from "./routes/imageRoutes.js";
+import dotenv from "dotenv";
+dotenv.config();
+
 
 //App config
 const PORT=process.env.PORT || 4000;
